@@ -37,15 +37,16 @@ li{
   margin: 1.3vmin 0 1.3vmin 2vmin;
 }
 
-input , button{
+input , button, textarea{
   height: 3vmin;
   width: 10vw;
   border: 1px solid rgb(213, 213, 213);
-  background-color:#d2f2ff; 
+  background-color:#f3fcff; 
   border-radius: 2px;
   font-size: 2vmin;
   padding: 0.5vmin;
   border-radius: 0.7vmin;
+  color: rgb(105, 105, 105);
 }
 
 
@@ -61,15 +62,26 @@ input , button{
 }
 
 label{
-  grid-row: 2;
-  grid-column: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 2vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1vmin 0 1vmin 0;
 }
 
-.add-btn{
+label>input, textarea{
+  grid-column: 1;
+  width: auto;
+}
+
+textarea{
+  height: auto;
+  width: auto;
+}
+
+textarea{
+  grid-row: 2;
+}
+
+.add-btn, .edit-btn{
   background-color:rgb(238, 238, 238);
   padding: 1vmin;
   border-radius: 0.6vmin;
@@ -82,4 +94,21 @@ button:hover{
 
 .delete-form{
   display: inline;
+}
+
+.edit-btn{
+  margin: 0;
+}
+
+.update-btn{
+  height: 4.23vmin;
+  width: 16vmin;
+}
+
+form{
+  color: gray;
+}
+
+.save-btn{
+  height: 3.4vmin;
 }
